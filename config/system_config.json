@@ -1,0 +1,47 @@
+{
+  "config_version": "1.0.0",
+  "status": "WORKING SPECIFICATION C34-A / post-exploratory. Frozen before full fault-detection evaluation (see docs/FROZEN_DECISIONS.md).",
+  "data": {
+    "zip": "data/Marine_Engine_Cleaned_Causal_v1.zip",
+    "zip_sha256": "ea142347a30f28c040003216a45cb74e6a5fc09094e6a12c9c95356f1facb85e",
+    "reference_member": "Reference_Data.csv",
+    "reference_rows": 25302
+  },
+  "exogenous_inputs": ["Engine Speed", "Water Brake Weight", "Engine room Temp.",
+                       "Charge Air IC Cooling Water Temp. In", "LO Cooling Water Temp. In"],
+  "load_inputs": ["Engine Speed", "Water Brake Weight"],
+  "ambient_inputs": ["Engine room Temp.", "Charge Air IC Cooling Water Temp. In", "LO Cooling Water Temp. In"],
+  "forbidden_predictors": ["Time", "Time_abs", "Time_rel", "Anomaly State", "file", "file_id", "run", "source_file"],
+  "targets": {
+    "manifest": "config/targets_C34A.csv",
+    "raw_inventory": "config/raw_sensor_inventory_38.csv",
+    "required_count": 34,
+    "manifest_sha256": null
+  },
+  "reference_folds": {
+    "row_index_inclusive": [[0, 5916], [5917, 11545], [11546, 15950], [15951, 20547], [20548, 25301]],
+    "start_times_s": [653, 10540, 19820, 27188, 34554],
+    "end_times_s": [10538, 19818, 27186, 34553, 41920],
+    "session_starts_s": [653, 10540, 19820],
+    "warmup_s": 3000
+  },
+  "purge_s": 300.0,
+  "inner_cv_blocks": 4,
+  "alpha_grid": [0.01, 0.1, 1, 10, 100, 1000, 10000],
+  "hgbr_params": {"max_depth": 6, "min_samples_leaf": 50, "learning_rate": 0.05, "l2_regularization": 1.0, "random_state": 42},
+  "scale_floor": 1e-06,
+  "gate": {
+    "deployed_params": "config/gate_deployed.json",
+    "fold_thermal_params": "config/gate_fold_thermal_params.csv",
+    "fold_validation": "config/gate_fold_validation.csv",
+    "window_s": 300.0, "min_span_s": 270.0, "min_obs": 30, "min_nonmissing_frac": 0.75,
+    "lock_persist_s": 60.0, "gap_reset_s": 10.0, "caps_s": [900, 1200], "primary_cap_s": 900
+  },
+  "calibration": {"window_s": 300.0, "fixed_window": [0.0, 500.0], "min_eval_start_s": 500.0,
+                  "modes": ["uncal", "fixed500", "stability"]},
+  "thresholds": {"primary_quantile": 0.99, "sensitivity_quantile": 0.95},
+  "alarm": {"persist_s": 10.0, "gap_reset_s": 10.0},
+  "evaluation": {"W_primary": 300, "W_sensitivity": [150, 600], "primary_model": "M4",
+                 "primary_calibration": "stability", "primary_score": "rms"},
+  "ambient_ood": {"k": 5, "quantile": 0.99}
+}

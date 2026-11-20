@@ -1,0 +1,83 @@
+{
+  "frozen_decisions_sha256": "ddb605ab4782d14293c0c5601e0d00f5442a8f90bf5b52da17c31f4125e48eef",
+  "runtime_s": 102.3,
+  "n_mixed_runs": 13,
+  "n_injector_runs": 2,
+  "gate_matches_stage1": true,
+  "hypotheses": [
+    {
+      "hypothesis": "H1",
+      "contrast": "dAUC(M4,stability) vs 0",
+      "n": 13,
+      "n_nonzero": 13,
+      "hl": -0.0069821194871904635,
+      "ci_lo": -0.14010892526615493,
+      "ci_hi": 0.132851358767816,
+      "p": 1.0,
+      "p_holm": 1.0,
+      "rank_biserial": -0.01098901098901099
+    },
+    {
+      "hypothesis": "H2",
+      "contrast": "FA(M4,stability) - FA(M4,uncal)",
+      "n": 13,
+      "n_nonzero": 7,
+      "hl": -0.4982338396326386,
+      "ci_lo": -0.9940713278626174,
+      "ci_hi": 0.0,
+      "p": 0.015625,
+      "p_holm": 0.046875,
+      "rank_biserial": -1.0
+    },
+    {
+      "hypothesis": "H3",
+      "contrast": "dAUC(M4,stability) - dAUC(M2,stability)",
+      "n": 13,
+      "n_nonzero": 13,
+      "hl": -0.03400537832668671,
+      "ci_lo": -0.12919120855148347,
+      "ci_hi": 0.027448850315246076,
+      "p": 0.2734375,
+      "p_holm": 0.546875,
+      "rank_biserial": -0.3626373626373626
+    }
+  ],
+  "primary_arm": {
+    "model": "M4",
+    "n": 13,
+    "n_eligible": 13.0,
+    "auc_true_median": 0.6081876079447324,
+    "auc_plac_median": 0.5878128013806406,
+    "dAUC_median": 0.07461623690121444,
+    "dAUC_q25": -0.1829943242743033,
+    "dAUC_q75": 0.11786400227665239,
+    "dAUC_mean": 0.011189258103132359,
+    "dPR_median": 0.050527221854588245,
+    "fa_time_frac_pre_median": 0.0,
+    "fa_per_hour_median": 0.0,
+    "detected_rate": 0.5384615384615384,
+    "detected_within_W_rate": 0.3076923076923077,
+    "alarm_at_onset_rate": 0.3076923076923077,
+    "delay_median_s": 0.0,
+    "fullrun_auc_median": 0.726319340432841
+  },
+  "time_only": {
+    "model": "TIME_ONLY",
+    "n": 13,
+    "n_eligible": 13.0,
+    "auc_true_median": 1.0,
+    "auc_plac_median": 1.0,
+    "dAUC_median": 0.0,
+    "dAUC_q25": 0.0,
+    "dAUC_q75": 0.0,
+    "dAUC_mean": 0.0,
+    "dPR_median": 0.0,
+    "fa_time_frac_pre_median": 0.0,
+    "fa_per_hour_median": 0.0,
+    "detected_rate": 0.0,
+    "detected_within_W_rate": 0.0,
+    "alarm_at_onset_rate": 0.0,
+    "delay_median_s": NaN,
+    "fullrun_auc_median": 1.0
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "source": "Reference_Data.csv; 9537 approved plateau endpoints",
+  "load_sd_q95": {
+    "Engine Speed": 0.9641565375223553,
+    "Water Brake Weight": 4.159190494505458
+  },
+  "thermal_l2_q95": 2.362814077354493,
+  "thermal_metric_order": [
+    "Engine room Temp.",
+    "Charge Air IC Cooling Water Temp. In",
+    "LO Cooling Water Temp. In",
+    "Cooling Water Temp. Engine In",
+    "LO Temp. Engine In",
+    "Exh.Gas Temp. Turbine In",
+    "abs_slope_Engine room Temp.",
+    "abs_slope_Charge Air IC Cooling Water Temp. In",
+    "abs_slope_LO Cooling Water Temp. In",
+    "abs_slope_Cooling Water Temp. Engine In",
+    "abs_slope_LO Temp. Engine In",
+    "abs_slope_Exh.Gas Temp. Turbine In"
+  ],
+  "thermal_median": {
+    "Engine room Temp.": 0.21498585808052795,
+    "Charge Air IC Cooling Water Temp. In": 0.05863216750606276,
+    "LO Cooling Water Temp. In": 0.02440085543790266,
+    "Cooling Water Temp. Engine In": 0.03825896820192886,
+    "LO Temp. Engine In": 0.07585038857915316,
+    "Exh.Gas Temp. Turbine In": 1.1913468457276057,
+    "abs_slope_Engine room Temp.": 0.06224255319148686,
+    "abs_slope_Charge Air IC Cooling Water Temp. In": 0.010907623318385656,
+    "abs_slope_LO Cooling Water Temp. In": 0.008967961165048442,
+    "abs_slope_Cooling Water Temp. Engine In": 0.009585365853658554,
+    "abs_slope_LO Temp. Engine In": 0.03319074352347193,
+    "abs_slope_Exh.Gas Temp. Turbine In": 0.1644586466165286
+  },
+  "thermal_robust_scale": {
+    "Engine room Temp.": 0.12108890914172302,
+    "Charge Air IC Cooling Water Temp. In": 0.01656796231357228,
+    "LO Cooling Water Temp. In": 0.004540582371818896,
+    "Cooling Water Temp. Engine In": 0.01197886281926954,
+    "LO Temp. Engine In": 0.03623845124490726,
+    "Exh.Gas Temp. Turbine In": 0.2519688825705226,
+    "abs_slope_Engine room Temp.": 0.06122707845260518,
+    "abs_slope_Charge Air IC Cooling Water Temp. In": 0.010101703508308722,
+    "abs_slope_LO Cooling Water Temp. In": 0.006236715203200388,
+    "abs_slope_Cooling Water Temp. Engine In": 0.010603992548492137,
+    "abs_slope_LO Temp. Engine In": 0.029474309294176167,
+    "abs_slope_Exh.Gas Temp. Turbine In": 0.15323172631562407
+  }
+}

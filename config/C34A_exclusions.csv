@@ -1,0 +1,5 @@
+target,reason
+Min. In-Cylinder Press. No.1,R1 zero variance in reference AND scenarios (residual scale undefined; contributes no information)
+Min. In-Cylinder Press. No.2,R1 zero variance in reference AND scenarios (residual scale undefined; contributes no information)
+Min. In-Cylinder Press. No.3,R1 zero variance in reference AND scenarios (residual scale undefined; contributes no information)
+Compressor Filter Loss,R2 structurally unrecorded in 5 scenario files (variable channel count across runs); also the direct physical measure of the air-filter fault
